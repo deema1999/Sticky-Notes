@@ -79,7 +79,7 @@ void viewNotes()
 	//this condition check if the file is empty or not st if empty the start(peek) of the file equal to the end of the file
 	if ( infile.peek() == EOF )
       {
-		  cout<<"Umm, can’t find any saved notes for you."<<endl;
+		  cout<<"\nUmm, can’t find any saved notes for you."<<endl<<endl;
       }
     else 
       {
@@ -141,7 +141,6 @@ int main()
 			{ 
 				cout<<"Thank you for using our Sticky Notes program";
 				return 0;
-				break;
 			}
 		 
 
