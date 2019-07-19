@@ -68,7 +68,7 @@ void viewNotes()
 	cout<<"Retrieve your notes? Absolutely!\nPlease let know your full name first: ";
 	cin>>firstName>>lastName;
 	ifstream infile;
-	string fullName=firstName+"_"+lastName+".txt";
+    fullName=firstName+"_"+lastName+".txt";
     infile.open(fullName.c_str());  
 	//this condition check if the user's file not exist then ask the user to check his/her name and if this is first time ask him/her to create a new user and then enter own notes 
     if(!infile) 
