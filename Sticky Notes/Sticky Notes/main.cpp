@@ -4,7 +4,27 @@ This program allow users to write thier notes ,save them and retrieve them whene
 
 */
 #include<iostream>
+#include<fstream>//library for files
+#include<string>
 using namespace std;
+
+void addNewUser()
+{
+	string firstName,lastName,fullName;
+	cout<<"Welcome aboard new user!\nPlease let me know your first name: ";
+	cin>>firstName;
+    cout<<"Great "<<firstName<<" now please enter your last name: "; 
+	cin>>lastName;
+	cout<<"Done!\nNice to meet you "<<firstName<<" "<<lastName<<endl<<endl;
+
+	//open a file for a new user to write on it 
+	ofstream outfile;
+	fullName=firstName+"_"+lastName+".txt";
+	//creat file with user name
+	outfile.open(fullName.c_str());
+	outfile.close();
+
+}
 int main()
 {
 	int choice;
@@ -22,6 +42,14 @@ int main()
 		cin >> choice;
 
 		system("cls");
+		switch(choice)
+		{
+		case 1:
+			{
+				addNewUser();
+			}
+		}
+
 	}
 	       
 
