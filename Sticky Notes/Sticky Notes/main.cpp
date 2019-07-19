@@ -6,11 +6,12 @@ This program allow users to write thier notes ,save them and retrieve them whene
 #include<iostream>
 #include<fstream>//library for files
 #include<string>
+#include<time.h>//header to use tm struct that is defined in it.
 using namespace std;
-
+string firstName,lastName,fullName;
 void addNewUser()
 {
-	string firstName,lastName,fullName;
+	
 	cout<<"Welcome aboard new user!\nPlease let me know your first name: ";
 	cin>>firstName;
     cout<<"Great "<<firstName<<" now please enter your last name: "; 
@@ -25,6 +26,44 @@ void addNewUser()
 	outfile.close();
 
 }
+void addNote()
+{
+	string note;
+	cout<<"Lets add a new note ...\nPlease enter your full name first: ";
+	cin>>firstName;
+	cin>>lastName;
+	fullName = firstName+"_"+lastName+".txt";
+	//if the file was found
+	if(ifstream(fullName))
+	{
+		cout<<"Your record is found, Im now opening your file ….\nReady!\nPlease enter your note:\n"; 
+		cin.get();
+		getline(cin,note);
+		//current date/time based on current system.
+		time_t now = time(0);
+		//a pointer of type tm which is a timer struct is created to point to current date/time.
+		tm *ltm = localtime(&now);
+		int year = 1900 + ltm->tm_year; //(Itm->tm_year) return years since 1900.
+		int month = 1 + ltm->tm_mon; //(Itm->tm_mon) return monthes since Januray.
+		int day = ltm->tm_mday; //(ltm->tm_mday) return day of the month.
+		int hour = ltm->tm_hour; //(ltm->tm_hour) return hours since midnight.
+		int min =  ltm->tm_min; //(ltm->tm_min) return minutes after the hour.
+		ofstream outfile;
+		outfile.open(fullName.c_str(),ios::app);//open the file with intend to append notes to it.
+		outfile << month<<"/"<<day<<"/"<<year<<" "<<hour<<":"<<min<<endl;
+		outfile << note <<"\n\n";
+		cout<<"\nYour note has been well received, 1 second while saving it ...\nDone!\n\n";
+
+	}
+	//if the file was not found
+	else
+	{
+		cout<<"\nOh! Sorry the user name was not found, please check the name again and if this is your\nfirst time here, please go ahead and create a new user from the main menu ...\n\n";
+	}
+
+
+}
+
 int main()
 {
 	int choice;
@@ -51,7 +90,7 @@ int main()
 			}
 		 case 2:
 			{
-				 
+				addNote();
 				break;
 			}
 		 case 3:
