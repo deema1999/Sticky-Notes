@@ -139,7 +139,8 @@ int main()
 			}
 		 case 4:
 			{ 
-
+				cout<<"Thank you for using our Sticky Notes program";
+				return 0;
 				break;
 			}
 		 
