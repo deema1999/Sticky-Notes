@@ -63,7 +63,46 @@ void addNote()
 
 
 }
+void viewNotes()
+{
+	cout<<"Retrieve your notes? Absolutely!\nPlease let know your full name first: ";
+	cin>>firstName>>lastName;
+	ifstream infile;
+    fullName=firstName+"_"+lastName+".txt";
+    infile.open(fullName.c_str());  
+	//this condition check if the user's file not exist then ask the user to check his/her name and if this is first time ask him/her to create a new user and then enter own notes 
+    if(!infile) 
+	{
+		cout<<"Oh! Sorry the user name was not found, please check the name again and if this is your first time here, please go ahead and create a new user from the main menu and add notes"<<endl;
+	    return ;
+	}
+	//this condition check if the file is empty or not st if empty the start(peek) of the file equal to the end of the file
+	if ( infile.peek() == EOF )
+      {
+		  cout<<"Umm, can’t find any saved notes for you."<<endl;
+      }
+    else 
+      {
+		  cout<<"Found it!\nHere are your stored notes:\n-------------"<<endl;
+		  if(infile.is_open())
+		  {
+		  string str;
+		   
+		  while(getline(infile,str))//using to read the file line by line
+		  {
+			   
+			   printf("%s",str.c_str());//using for printing as cout
+			   cout<<endl;
+			   
+		  }
 
+		  
+		  cout<<"-------------\nHappy to serve you :)"<<endl<<endl;
+		  
+      }
+	}
+	 infile.close(); // close your file
+}
 int main()
 {
 	int choice;
@@ -95,7 +134,7 @@ int main()
 			}
 		 case 3:
 			{
-				 
+				viewNotes();
 				break;
 			}
 		 case 4:
