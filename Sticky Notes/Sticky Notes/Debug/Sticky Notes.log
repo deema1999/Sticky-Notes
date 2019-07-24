@@ -1,4 +1,4 @@
-﻿Build started 07/19/2019 09:23:09 م.
+﻿Build started 07/24/2019 11:02:53 ص.
      1>Project "C:\Users\latif\OneDrive\سطح المكتب\sticky\Sticky-Notes\Sticky Notes\Sticky Notes\Sticky Notes.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
@@ -12,4 +12,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.67
+Time Elapsed 00:00:01.75
