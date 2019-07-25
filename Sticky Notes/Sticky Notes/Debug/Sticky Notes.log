@@ -1,31 +1,15 @@
-<<<<<<< HEAD
-﻿Build started 7/19/2019 9:00:30 PM.
-     1>Project "C:\Users\Deema\Desktop\Sticky-Notes\Sticky Notes\Sticky Notes\Sticky Notes.vcxproj" on node 2 (Build target(s)).
-=======
-﻿Build started 07/19/2019 09:12:23 م.
+﻿Build started 07/24/2019 11:02:53 ص.
      1>Project "C:\Users\latif\OneDrive\سطح المكتب\sticky\Sticky-Notes\Sticky Notes\Sticky Notes\Sticky Notes.vcxproj" on node 2 (Build target(s)).
->>>>>>> 8f0946058089bcdfa92636d5d5c146974a23baf3
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>c:\users\deema\desktop\sticky-notes\sticky notes\sticky notes\main.cpp(45): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\latif\onedrive\سطح المكتب\sticky\sticky-notes\sticky notes\sticky notes\main.cpp(45): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\time.inl(112) : see declaration of 'localtime'
        Link:
-<<<<<<< HEAD
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Deema\Desktop\Sticky-Notes\Sticky Notes\Debug\Sticky Notes.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Deema\Desktop\Sticky-Notes\Sticky Notes\Debug\Sticky Notes.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Deema\Desktop\Sticky-Notes\Sticky Notes\Debug\Sticky Notes.lib" /MACHINE:X86 Debug\main.obj
-         LINK : C:\Users\Deema\Desktop\Sticky-Notes\Sticky Notes\Debug\Sticky Notes.exe not found or not built by the last incremental link; performing full link
-         Sticky Notes.vcxproj -> C:\Users\Deema\Desktop\Sticky-Notes\Sticky Notes\Debug\Sticky Notes.exe
-     1>Done Building Project "C:\Users\Deema\Desktop\Sticky-Notes\Sticky Notes\Sticky Notes\Sticky Notes.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:01.81
-=======
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\latif\OneDrive\سطح المكتب\sticky\Sticky-Notes\Sticky Notes\Debug\Sticky Notes.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\latif\OneDrive\سطح المكتب\sticky\Sticky-Notes\Sticky Notes\Debug\Sticky Notes.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\latif\OneDrive\سطح المكتب\sticky\Sticky-Notes\Sticky Notes\Debug\Sticky Notes.lib" /MACHINE:X86 Debug\main.obj
          Sticky Notes.vcxproj -> C:\Users\latif\OneDrive\سطح المكتب\sticky\Sticky-Notes\Sticky Notes\Debug\Sticky Notes.exe
      1>Done Building Project "C:\Users\latif\OneDrive\سطح المكتب\sticky\Sticky-Notes\Sticky Notes\Sticky Notes\Sticky Notes.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.17
->>>>>>> 8f0946058089bcdfa92636d5d5c146974a23baf3
+Time Elapsed 00:00:01.75
