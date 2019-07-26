@@ -7,16 +7,17 @@ This program allow users to write thier notes ,save them and retrieve them whene
 #include<fstream>//library for files
 #include<string>
 #include<time.h>//header to use tm struct that is defined in it.
+#include <windows.h>
 using namespace std;
 string firstName,lastName,fullName;
 void addNewUser()
 {
-	
-	cout<<"Welcome aboard new user!\nPlease let me know your first name: ";
+	system("color F4");
+	cout<<"Welcome aboard new user!\n\nPlease let me know your first name: ";
 	cin>>firstName;
-    cout<<"Great "<<firstName<<" now please enter your last name: "; 
+    cout<<"\nGreat "<<firstName<<" now please enter your last name: "; 
 	cin>>lastName;
-	cout<<"Done!\nNice to meet you "<<firstName<<" "<<lastName<<endl<<endl;
+	cout<<"\nDone!\nNice to meet you "<<firstName<<" "<<lastName<<endl<<endl;
 
 	//open a file for a new user to write on it 
 	ofstream outfile;
@@ -28,15 +29,16 @@ void addNewUser()
 }
 void addNote()
 {
+    system("color F1");
 	string note;
-	cout<<"Lets add a new note ...\nPlease enter your full name first: ";
+	cout<<"Lets add a new note ...\n\nPlease enter your full name first: ";
 	cin>>firstName;
 	cin>>lastName;
 	fullName = firstName+"_"+lastName+".txt";
 	//if the file was found
 	if(ifstream(fullName))
 	{
-		cout<<"Your record is found, Im now opening your file ….\nReady!\nPlease enter your note:\n"; 
+		cout<<"\nYour record is found, Im now opening your file ...\nReady!\n\nPlease enter your note:\n"; 
 		cin.get();
 		getline(cin,note);
 		//current date/time based on current system.
@@ -65,7 +67,8 @@ void addNote()
 }
 void viewNotes()
 {
-	cout<<"Retrieve your notes? Absolutely!\nPlease let know your full name first: ";
+	system("color F2");
+	cout<<"Retrieve your notes? Absolutely!\n\nPlease let know your full name first: ";
 	cin>>firstName>>lastName;
 	ifstream infile;
     fullName = firstName+"_"+lastName+".txt";
@@ -73,7 +76,7 @@ void viewNotes()
 	//this condition check if the user's file not exist then ask the user to check his/her name and if this is first time ask him/her to create a new user and then enter own notes 
     if(!infile) 
 	{
-		cout<<"Oh! Sorry the user name was not found, please check the name again and if this is your first time here, please go ahead and create a new user from the main menu and add notes"<<endl;
+		cout<<"\nOh! Sorry the user name was not found, please check the name again and if this is your first time here, please go ahead and create a new user from the main menu and add notes"<<endl;
 	    return ;
 	}
 	//this condition check if the file is empty or not exist if empty the start(peek) of the file equal to the end of the file
@@ -83,7 +86,7 @@ void viewNotes()
       }
     else 
       {
-		  cout<<"Found it!\nHere are your stored notes:\n-------------"<<endl;
+		  cout<<"Found it!\n\nHere are your stored notes:\n-------------"<<endl;
 		  if(infile.is_open())
 		  {
 		  string str;
@@ -110,11 +113,12 @@ int main()
 		/*creat the menu so from it the user would like to be asked to enter his/her user name, then enter a text message. 
           Later on, the user should be able to retrieve all his/her messages.*/
 		system("cls");
-		cout<<"Welcome to the brand new 'Sticky Notes'\nHere is the list of operation this program offers:\n";
+		system("color F5"); // change background and text colors in the console
+		cout<<"Welcome to the brand new 'Sticky Notes'\n\nHere is the list of operation this program offers:\n\n";
 		cout<<"1- Add new user\n";
 		cout<<"2- Add new note\n";
 		cout<<"3- View notes for a specific user\n";
-		cout<<"4- Exit\n";
+		cout<<"4- Exit\n\n";
 		cout<<"Enter your choice : ";
 		cin >> choice;
 		system("cls");
